@@ -1,0 +1,17 @@
+CREATE TABLE Arts_Craft (id integer primary key, name TEXT, quantity INTEGER, aisle INTEGER);
+
+INSERT INTO Arts_Craft VALUES (1, "20x20 canvas", 67, 5);
+INSERT INTO Arts_Craft VALUES (2, "Ultramarine blue paint", 57, 7);
+INSERT INTO Arts_Craft VALUES (3, "wide angle brush", 100, 8);
+INSERT INTO Arts_Craft VALUES (4, "Gesso", 20, 8);
+SELECT * FROM Arts_Craft;
+INSERT INTO Arts_Craft VALUES (5, "oil paint packets", 50, 8);
+
+--display ordered by aisle
+SELECT * FROM Arts_Craft ORDER BY aisle;
+
+--what is the total quantity of items in the store?
+SELECT sum(quantity) FROM Arts_Craft;
+
+--display ordered by amount of items 
+SELECT name, quantity FROM Arts_Craft ORDER BY quantity;
